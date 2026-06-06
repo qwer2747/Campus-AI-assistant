@@ -1,7 +1,5 @@
 # ==================== RAG.py ====================
 import streamlit as st
-import os
-os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'  # 使用国内镜像
 
 import pandas as pd
 import requests
