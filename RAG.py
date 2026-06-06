@@ -1,6 +1,6 @@
 # ==================== RAG.py ====================
 import streamlit as st
-
+import os
 import pandas as pd
 import requests
 from sentence_transformers import SentenceTransformer
