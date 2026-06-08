@@ -7,23 +7,11 @@ from RAG import ask, learn_new_knowledge  # 直接调用 RAG.py 里的接口
 DB_PATH = "user_memory.db"
 
 # ==================== 页面配置 ====================
-st.set_page_config(page_title="校园新生指南", page_icon="💬", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="校园新生指南",
+                   page_icon="💬", 
+                   layout="wide", 
+                   initial_sidebar_state="expanded")
 
-st.markdown("""
-<style>
-/* 修复手机端浏览器键盘收起后输入框错位的问题 */
-div[data-testid="stChatInput"] {
-    position: fixed !important;
-    bottom: 0 !important;
-    z-index: 1000 !important;
-    padding-bottom: max(15px, env(safe-area-inset-bottom)) !important; /* 适配苹果手机底部小黑条 */
-}
-/* 防止聊天记录被底部的输入框挡住 */
-.block-container {
-    padding-bottom: 120px !important;
-}
-</style>
-""", unsafe_allow_html=True)
 
 # ==================== SQLite 数据库初始化 (线程安全版) ====================
 def init_sqlite_db():
