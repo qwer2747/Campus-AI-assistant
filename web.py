@@ -11,15 +11,7 @@ st.set_page_config(page_title="校园新生指南",
                    page_icon="💬", 
                    layout="wide", 
                    initial_sidebar_state="expanded")
-st.markdown("""
-<style>
-/* 强制网页撑开一整个屏幕的高度，防止输入框跑到顶上 */
-.block-container {
-    min-height: 100vh !important;
-    padding-bottom: 100px !important;
-}
-</style>
-""", unsafe_allow_html=True)
+
 
 # ==================== SQLite 数据库初始化 (线程安全版) ====================
 def init_sqlite_db():
